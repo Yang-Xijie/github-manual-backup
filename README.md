@@ -1,10 +1,10 @@
 # Manually backup GitHub repos
 
-1. [install GitHub CLI](https://docs.github.com/en/rest/quickstart#getting-started-using-github-cli)
+1. [install GitHub CLI](https://github.com/cli/cli#installation)
    - `brew install gh`
 2. login
    - `gh auth login`
-3. [GitHub API | List repositories for a user](https://docs.github.com/en/rest/repos/repos#list-repositories-for-a-user)
-   - `gh api users/Yang-Xijie/repos > output/repos.json`
+3. [list repositories for the authenticated user](https://docs.github.com/en/rest/repos/repos#list-repositories-for-the-authenticated-user)
+   - `gh api "user/repos?type=all&sort=created&per_page=100&page=1" > output/repos.json`
 4. run python script
    - `python3 main.py`
